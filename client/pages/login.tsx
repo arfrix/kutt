@@ -17,6 +17,7 @@ import { Button } from "../components/Button";
 import Text, { H2 } from "../components/Text";
 import ALink from "../components/ALink";
 import Icon from "../components/Icon";
+import useTranslation from "../i18n/useTranslation";
 
 const LoginForm = styled(Flex).attrs({
   as: "form",
@@ -32,6 +33,7 @@ const Email = styled.span`
 `;
 
 const LoginPage = () => {
+  const { t } = useTranslation();
   const { isAuthenticated } = useStoreState(s => s.auth);
   const login = useStoreActions(s => s.auth.login);
   const [error, setError] = useState("");
@@ -144,7 +146,7 @@ const LoginPage = () => {
                   stroke="white"
                   mr={2}
                 />
-                Log in
+                {t("login")}
               </Button>
               {!DISALLOW_REGISTRATION && (
                 <Button
