@@ -6,6 +6,7 @@ import decode from "jwt-decode";
 import cookie from "js-cookie";
 import Head from "next/head";
 import React from "react";
+import RTLManager from "../components/RTLManager";
 
 import { initGA, logPageView, initSentry } from "../helpers/analytics";
 import { initializeStore } from "../store";
@@ -88,7 +89,9 @@ class MyApp extends App<any> {
         </Head>
         <StoreProvider store={this.store}>
           <LanguageProvider>
-            <Component {...pageProps} />
+            <RTLManager>
+              <Component {...pageProps} />
+            </RTLManager>
           </LanguageProvider>
         </StoreProvider>
       </>
