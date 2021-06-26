@@ -108,11 +108,11 @@ const LoginPage = () => {
         ) : (
           <LoginForm id="login-form" onSubmit={onSubmit("login")}>
             <Text {...label("email")} as="label" mb={2} bold>
-              Email address:
+              {t("emailAdress")}
             </Text>
             <TextInput
               {...email("email")}
-              placeholder="Email address..."
+              placeholder={t("emailAdressPlaceHolder")}
               height={[56, 64, 72]}
               fontSize={[15, 16]}
               px={[4, 40]}
@@ -122,11 +122,11 @@ const LoginPage = () => {
               autoFocus
             />
             <Text {...label("password")} as="label" mb={2} bold>
-              Password{!DISALLOW_REGISTRATION ? " (min chars: 8)" : ""}:
+              {t("password")}{!DISALLOW_REGISTRATION ? ` ${t("passwordMinCharWarn")}` : ""}
             </Text>
             <TextInput
               {...password("password")}
-              placeholder="Password..."
+              placeholder={t("passwordPlaceHolder")}
               px={[4, 40]}
               height={[56, 64, 72]}
               fontSize={[15, 16]}
