@@ -161,7 +161,7 @@ const LoginPage = () => {
                     stroke="white"
                     mr={2}
                   />
-                  Sign up
+                {t("signUp")}
                 </Button>
               )}
             </Flex>
@@ -173,7 +173,7 @@ const LoginPage = () => {
                 alignSelf="flex-start"
                 my={16}
               >
-                Forgot your password?
+                {t("forgotPass")}
               </ALink>
             </Link>
             <Text color="red" mt={1} normal>
