@@ -33,7 +33,7 @@ const Email = styled.span`
 `;
 
 const LoginPage = () => {
-  const { t } = useTranslation();
+  const { t, checkIfCurrentLanguageIsRTL } = useTranslation();
   const { isAuthenticated } = useStoreState(s => s.auth);
   const login = useStoreActions(s => s.auth.login);
   const [error, setError] = useState("");
@@ -45,6 +45,7 @@ const LoginPage = () => {
   }>(null, { withIds: true });
 
   useEffect(() => {
+    console.log(checkIfCurrentLanguageIsRTL());
     if (isAuthenticated) Router.push("/");
   }, [isAuthenticated]);
 
@@ -122,7 +123,8 @@ const LoginPage = () => {
               autoFocus
             />
             <Text {...label("password")} as="label" mb={2} bold>
-              {t("password")}{!DISALLOW_REGISTRATION ? ` ${t("passwordMinCharWarn")}` : ""}
+              {t("password")}
+              {!DISALLOW_REGISTRATION ? ` ${t("passwordMinCharWarn")}` : ""}
             </Text>
             <TextInput
               {...password("password")}
@@ -161,7 +163,7 @@ const LoginPage = () => {
                     stroke="white"
                     mr={2}
                   />
-                {t("signUp")}
+                  {t("signUp")}
                 </Button>
               )}
             </Flex>

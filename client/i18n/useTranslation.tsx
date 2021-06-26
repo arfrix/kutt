@@ -14,5 +14,12 @@ export default function useTranslation() {
     return Dictionary[locale][key] || Dictionary[defaultLocale][key] || key;
   }
 
-  return { t, locale, setLocale };
+  function checkIfCurrentLanguageIsRTL() {
+    if (locale === "fa") {
+      return true;
+    }
+    return false;
+  }
+
+  return { t, locale, setLocale, checkIfCurrentLanguageIsRTL };
 }
