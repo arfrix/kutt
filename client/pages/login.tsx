@@ -146,7 +146,7 @@ const LoginPage = () => {
                 <Icon
                   name={loading.login ? "spinner" : "login"}
                   stroke="white"
-                  mr={2}
+                  ml={2}
                 />
                 {t("login")}
               </Button>
@@ -161,7 +161,7 @@ const LoginPage = () => {
                   <Icon
                     name={loading.signup ? "spinner" : "signup"}
                     stroke="white"
-                    mr={2}
+                    ml={2}
                   />
                   {t("signUp")}
                 </Button>
