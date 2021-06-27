@@ -29,7 +29,7 @@ const LogoImage = styled.div`
     position: relative;
     display: flex;
     align-items: center;
-    margin: 0 8px 0 0;
+    margin: 0 8px 0 24px;
     font-size: 22px;
     font-weight: bold;
     text-decoration: none;
