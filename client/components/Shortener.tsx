@@ -22,7 +22,7 @@ const SubmitIconWrapper = styled.div`
   content: "";
   position: absolute;
   top: 0;
-  right: 12px;
+  left: 12px;
   width: 64px;
   height: 100%;
   display: flex;
@@ -34,7 +34,7 @@ const SubmitIconWrapper = styled.div`
     fill: #673ab7;
   }
   @media only screen and (max-width: 448px) {
-    right: 8px;
+    left: 8px;
     width: 40px;
   }
 `;
@@ -208,8 +208,8 @@ const Shortener = () => {
           width={1}
           height={[58, 64, 72]}
           px={0}
-          pr={[48, 84]}
-          pl={[32, 40]}
+          pl={[48, 84]}
+          pr={[32, 40]}
           autoFocus
           data-lpignore
         />
