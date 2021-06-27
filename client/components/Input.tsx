@@ -240,7 +240,7 @@ export const Checkbox: FC<CheckboxProps> = ({
         checked={checked}
       />
       <CheckboxBox checked={checked} width={width} height={height} />
-      <Span ml={[10, 12]} mt="1px" color="#555">
+      <Span mr={[10, 12]} mt="1px" color="#555">
         {label}
       </Span>
     </Flex>
